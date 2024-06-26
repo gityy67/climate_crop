@@ -64,4 +64,4 @@ for model_name, model in models.items():
 results_df = pd.DataFrame(results)
 
 # Save the models, label encoder, and results with joblib using compression
-joblib.dump((best_estimators, label_encoder, results_df), 'models.pkl', compress=7)
+joblib.dump((best_estimators, label_encoder, results_df), 'models.pkl', compress=9)
