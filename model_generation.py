@@ -12,7 +12,7 @@ import joblib
 data = pd.read_csv("./climate-ds.csv")
 
 # Sample data from data (50%)
-sample_data = data.sample(frac=0.3, random_state=42)
+sample_data = data.sample(frac=0.8, random_state=42)
 
 
 # Drop unnecessary columns ('Unnamed: 0', 'Area')
