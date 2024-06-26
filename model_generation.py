@@ -5,7 +5,7 @@ from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn.metrics import mean_absolute_error, r2_score
 from sklearn.tree import DecisionTreeRegressor
 from sklearn.ensemble import RandomForestRegressor, ExtraTreesRegressor, AdaBoostRegressor
-from xgboost import XGBRegressor
+
 import joblib
 
 # Load the dataset
@@ -35,7 +35,7 @@ x_train, x_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 models = {
     'Decision Tree': DecisionTreeRegressor(),
     'Random Forest': RandomForestRegressor(),
-    'XGB': XGBRegressor(),
+    
     'Extra Trees': ExtraTreesRegressor(),
     'AdaBoost': AdaBoostRegressor()
 }
@@ -43,7 +43,7 @@ models = {
 param_grids = {
     'Decision Tree': {'max_depth': [5, 10, 15, 20], 'min_samples_split': [2, 10, 20]},
     'Random Forest': {'n_estimators': [50, 100, 150], 'max_depth': [10, 15, 20]},
-    'XGB': {'n_estimators': [50, 100, 150], 'learning_rate': [0.01, 0.1, 0.2]},
+   
     'Extra Trees': {'n_estimators': [50, 100, 150], 'max_depth': [10, 15, 20]},
     'AdaBoost': {'n_estimators': [50, 100, 150], 'learning_rate': [0.01, 0.1, 0.2]}
 }
